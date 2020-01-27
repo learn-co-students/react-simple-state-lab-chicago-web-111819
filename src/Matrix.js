@@ -3,6 +3,10 @@ import Cell from "./Cell"
 
 export default class Matrix extends Component {
 
+  static defaultProps = {
+    values: Array(10).fill(Array(10).fill("#F00"))
+  }
+
   genRow = (vals) => {
     return (vals.map((val, i) => <Cell value={val} key={i} />)) // replace me and render a cell component instead!
   }
@@ -23,7 +27,7 @@ export default class Matrix extends Component {
 
 
 
-Matrix.defaultProps = {
-  values: Array(10).fill(Array(10).fill("#F00"))
-}
+// Matrix.defaultProps = {
+//   values: Array(10).fill(Array(10).fill("#F00"))
+// }
 
